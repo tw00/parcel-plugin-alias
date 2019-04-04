@@ -1,6 +1,11 @@
 # Parcel Alias
 alias for parcel
 
+# Install
+```sh
+npm install https://github.com/tw00/parcel-plugin-alias.git
+```
+
 # Update fork:
 - Compatible with parcel-bundler 1.12.3
 - Overwrites ```resolveAlias``` instead of ```resolve```
