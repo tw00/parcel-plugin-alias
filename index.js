@@ -5,9 +5,11 @@ module.exports = bundler => {
   let options;
 
   try {
-    options = require(path.resolve(__dirname, "../../.aliasrc"));
+    options = require(path.resolve(bundler.options.rootDir + '/.aliasrc.js'));
+    // options = require(path.resolve(__dirname, "../../.aliasrc"));
   } catch (e) {
     // no handler
+    console.log("No alias config found in root foler", bundler.options.rootDir )
   }
 
   if (options) {
@@ -19,7 +21,7 @@ module.exports = bundler => {
         let replace = options[alias];
         if (filename.startsWith(alias)) {
           let target = replace + filename.substring(alias.length);
-          //              console.log("match", filename, '->', target)
+          // console.log("match", filename, '->', target)
           return target;
         }
       }
