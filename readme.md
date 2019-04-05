@@ -1,5 +1,5 @@
 # Parcel Alias
-alias for parcel
+Better alias for parcel
 
 # Install
 ```sh
